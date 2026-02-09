@@ -1,0 +1,110 @@
+body {
+    font-family: "JetBrains Mono", monospace;
+    background: #F8C8DC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+    padding-left: 90px;
+    grid-area: 2 / 1 / 3 / 6;
+}
+
+.valentines-text{
+    display: flex;
+    grid-area: 1 / 1 / 2 / 6;}
+
+.btn {
+    padding: 14px 32px;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: 400;
+    transition: transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.2s ease;
+}
+
+
+.yes {
+    background: linear-gradient(135deg, #72BB72, #91CA91);
+    color: white;
+    box-shadow: 0 8px 20px rgba(34, 197, 94, 0.35);
+}
+
+.yes:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(34, 197, 94, 0.5);
+}
+
+.no {
+    background: linear-gradient(135deg, #E21D6F, #E74689);
+    color: white;
+    box-shadow: 0 8px 20px rgba(239, 68, 68, 0.35);
+}
+
+.no:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(239, 68, 68, 0.5);
+}
+
+.btn:active {
+    transform: scale(0.96);
+}
+
+.btn:hover {
+    filter: brightness(1.1);
+}
+
+.dialog-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.dialog {
+    background: #F297BD;
+    color: white;
+    padding: 24px 32px;
+    border-radius: 16px;
+    text-align: center;
+    min-width: 280px;
+    animation: pop 0.3s ease;
+}
+.dialogbtn {
+    background: linear-gradient(135deg, #F8C8DC, #F297BD);
+    color: white;
+}
+
+.dialog img {
+    display: block;
+    margin: 0 auto 16px;
+}
+
+
+@keyframes pop {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
