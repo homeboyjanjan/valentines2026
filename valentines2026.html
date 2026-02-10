@@ -29,6 +29,7 @@
     function clickNo(button) {
         let currentSize = button.dataset.scale || 1;
         currentSize -= 0.1;
+        currentSize = parseFloat(currentSize.toFixed(1));
         if (currentSize === 0.9) {
             alert("error, what are you trying to do here? maybe try clicking again?")
         }
