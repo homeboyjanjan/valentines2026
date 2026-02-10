@@ -30,7 +30,10 @@
         let currentSize = button.dataset.scale || 1;
         currentSize -= 0.1;
         if (currentSize === 0.9) {
-            alert("error, what are you trying to do here?")
+            alert("error, what are you trying to do here? maybe try clicking again?")
+        }
+        if (currentSize === 0.4) {
+            alert("you really thought i would let you press no?")
         }
         button.dataset.scale = currentSize;
         button.style.transform = `scale(${currentSize})`;
